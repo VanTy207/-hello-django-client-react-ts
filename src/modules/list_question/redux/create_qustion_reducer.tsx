@@ -1,7 +1,5 @@
-import { CREATE_QUESTION_EVENT } from "../../common/action_type";
-import { CreateQuestionRequestAction } from '../actions/create_question/create_question.action';
-import { CreateQuestionState } from "../actions/create_question/create_question.state";
-import {CREATE_QUESTION_FAIL, CREATE_QUESTION_SUCCESS, CreateQuestionRequestState } from "../actions/create_question/create_qustion.type";
+import { CreateQuestionRequestAction, CREATE_QUESTION_EVENT } from './create_question.action';
+import { CreateQuestionRequestState, CreateQuestionState, CREATE_QUESTION_FAIL, CREATE_QUESTION_SUCCESS } from './create_question.state';
 
 
 const INITIAL_STATE: CreateQuestionState = {

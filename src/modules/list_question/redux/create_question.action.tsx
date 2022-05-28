@@ -1,5 +1,6 @@
-import { CreateQuestionForm } from '../../../modules/list_question/interface';
-import { CREATE_QUESTION_EVENT } from '../../../common/action_type';
+import { CreateQuestionForm } from "../list_question";
+
+export const CREATE_QUESTION_EVENT = 'CREATE_QUESTION_EVENT';
 
 export interface CreateQuestionRequestAction {
     type: typeof CREATE_QUESTION_EVENT;

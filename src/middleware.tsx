@@ -1,4 +1,4 @@
-import { REGISTER, LOGIN, LOGOUT } from "../common/action_type";
+import { REGISTER, LOGIN, LOGOUT } from "./common/action_type";
 
 const localStorageMiddleware = (store : any) => (next: any) => (action: any) => {
   if (action.type === REGISTER || action.type === LOGIN) {

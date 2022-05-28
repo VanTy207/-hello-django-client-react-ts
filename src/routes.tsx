@@ -1,18 +1,19 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
   Route,
   Routes
 } from "react-router-dom";
-import App from "./App";
+import FilterQiestion from './modules/filter_question/filter_question';
+import ListQuestionComponent from './modules/list_question/list_question';
+import SortQuestion from "./modules/sort_question/sort_question";
 
- const AppRouter = ({...prop}) => {
+const AppRouter = ({ ...prop }) => {
   return (
-    <Router>
-      <Routes>
-        <Route  path="/"  element={<App/>} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<ListQuestionComponent />} />
+      <Route path="/filter-question" element={<FilterQiestion />} />
+      <Route path="/sort-question" element={<SortQuestion />} />
+    </Routes>
   );
 }
 export default AppRouter

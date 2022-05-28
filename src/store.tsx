@@ -3,8 +3,8 @@ import { createLogger } from 'redux-logger'
 import createSagaMiddleware from "redux-saga";
 import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
 import { localStorageMiddleware } from './middleware';
-import rootReducer from './reducers/root_reducers';
-import rootSaga from './saga_actions/root_saga';
+import rootSaga from './root_saga';
+import rootReducers from './root_reducers';
 
 const getMiddleware = () => {
     if (process.env.NODE_ENV === 'production') {
@@ -15,7 +15,7 @@ const getMiddleware = () => {
 };
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(rootReducer, getMiddleware());
+const store = createStore(rootReducers, getMiddleware());
 
 sagaMiddleware.run(rootSaga);
 

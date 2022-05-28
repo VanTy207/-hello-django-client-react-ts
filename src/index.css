@@ -12,3 +12,13 @@ code {
 .card-border {
     border-color: transparent !important;
 }
+
+* a {
+    color: white;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #3399cc;
+    cursor: pointer;
+}

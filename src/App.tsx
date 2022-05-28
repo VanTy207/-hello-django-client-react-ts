@@ -1,16 +1,17 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
+import AppRouter from './routes';
 import { Header } from './components/header/header';
-import  ListQuestionComponent from './modules/list_question/list_question';
 
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Header message='Nguyen Van Ty'/>
-      <ListQuestionComponent/>
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Header message='Nguyen Van Ty' />
+        <AppRouter />
+      </div>
+    </Router>
+  )
 }
-
-export default App;
